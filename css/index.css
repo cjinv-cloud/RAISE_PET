@@ -221,6 +221,7 @@ main.hero {
 }
 
 main .wrapper-txt {
+    width: 100%;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -243,6 +244,7 @@ main .wrapper-txt .des {
     font-size: 32px;
     line-height: 40px;
 }
+
 
 /*article 공통********************************************/
 
