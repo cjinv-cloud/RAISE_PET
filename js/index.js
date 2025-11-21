@@ -5,28 +5,49 @@ $(function () {
     const $htmlBody = $('html, body');
     const $header = $('header');
     const $pager = $('.side-pager');
+    const $headerColorTargets = $('header svg, header nav.lang-nav ul li a');
     const $pagerItems = $pager.find('li');
     const $pagerLinks = $pager.find('a');
     const animationDuration = 800;
-    // DOM 순서대로 모든 섹션(#p1 ~ #p9) 수집
+    // DOM 순서대로 모든 섹션(#p1 ~ #pN) 수집
     const $sections = $('[id^="p"]').filter(function () {
         return /^p\d+$/.test(this.id);
     });
+    const lastSectionId = $sections.length ? $sections.last().attr('id') : null;
+
+    function isLastSection(id) {
+        return lastSectionId && id === lastSectionId;
+    }
     let currentIndex = 0;
     let isAnimating = false;
 
 
-    //side-pager와 header #p9일때 숨김 처리
-    // 1. nav.side-pager 숨김/드러남 함수: 사용자가 보는 위치가 #p9일 때는 side-pager가 보이지 않아야 하고, #p1~#p8일 때는 보여야 함
+    //side-pager와 header 마지막 섹션에서 숨김 처리
+    // 1. nav.side-pager 숨김/드러남 함수:
+    //    - 첫 번째 섹션(#p1)일 때도 숨김 처리 (hero 영역에서 페이저 미노출)
+    //    - 마지막 섹션일 때도 숨김 처리 (footer 영역)
     function applySidePagerState(id) {
-        const shouldHidePager = id === 'p9';
+        const isFirstSection = id === 'p1';
+        const shouldHidePager = isFirstSection || isLastSection(id);
         $pager.toggleClass('is-hidden', shouldHidePager);
     }
 
-    // 2. header 숨김/드러남 함수: 사용자가 보는 위치가 #p9일 때는 header가 보이지 않아야 하고, #p1~#p8일 때는 보여야 함
+    // 2. header 숨김/드러남 함수: 사용자가 보는 위치가 마지막 섹션일 때는 header가 보이지 않아야 함
     function applyHeaderState(id) {
-        const shouldHideHeader = id === 'p9';
+        const shouldHideHeader = isLastSection(id);
         $header.toggleClass('is-hidden', shouldHideHeader);
+    }
+
+    // 3. header 색상 변경 함수:
+    //    - 첫 번째 섹션(#p1)에서는 ivory 클래스 유지
+    //    - 나머지 섹션에서는 black 클래스를 적용
+    function applyHeaderColorState(id) {
+        const isFirstSection = id === 'p1';
+        $headerColorTargets.each(function () {
+            $(this)
+                .toggleClass('ivory', isFirstSection)
+                .toggleClass('black', !isFirstSection);
+        });
     }
 
     function setActiveById(id) {
@@ -48,6 +69,7 @@ $(function () {
         // side-pager와 header 숨김/드러남 상태 동기화
         applySidePagerState(id);
         applyHeaderState(id);
+        applyHeaderColorState(id);
     }
 
     function scrollToSection($target) {

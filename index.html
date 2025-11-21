@@ -43,12 +43,12 @@
 
 <body>
 
-    <header class="header">
+    <header>
         <div class="inner-header">
             <h1 class="logo">
                 <a href="#">
                     <i>
-                        <svg>
+                        <svg class="ivory">
                             <use href="public/sprite.svg#icon_logo"></use>
                         </svg>
                     </i>
@@ -57,15 +57,15 @@
             <nav class="lang-nav">
                 <a href="#" class="lang-btn">
                     <i>
-                        <svg>
+                        <svg class="ivory">
                             <use href="public/sprite.svg#icon_lang"></use>
                         </svg>
                     </i>
                 </a>
                 <ul>
-                    <li><a href="#">한국어</a></li>
-                    <li><a href="en/index.html">ENG</a></li>
-                    <li><a href="#">日本語</a></li>
+                    <li><a href="#" class="ivory">한국어</a></li>
+                    <li><a href="en/index.html" class="ivory">ENG</a></li>
+                    <li><a href="#" class="ivory">日本語</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,41 +75,27 @@
     <nav class="side-pager">
         <ul>
             <li class="on"><a href="#p1"><span>main</span></a></li>
-            <li><a href="#p2"><span>about-us</span></a></li>
-            <li><a href="#p3"><span>reward</span></a></li>
-            <li><a href="#p4"><span>learn & earn</span></a></li>
-            <li><a href="#p5"><span>walking</span></a></li>
-            <li><a href="#p6"><span>raise loop</span></a></li>
-            <li><a href="#p7"><span>ai pet-life</span></a></li>
-            <li><a href="#p8"><span>pet shop</span></a></li>
+            <li><a href="#p2"><span>reward</span></a></li>
+            <li><a href="#p3"><span>learn & earn</span></a></li>
+            <li><a href="#p4"><span>walking</span></a></li>
+            <li><a href="#p5"><span>raise loop</span></a></li>
+            <li><a href="#p6"><span>ai pet-life</span></a></li>
+            <li><a href="#p7"><span>pet shop</span></a></li>
         </ul>
     </nav>
 
 
     <main id="p1" class="hero">
-        <div class="wrapper-txt">
-            <div data-aos="fade-zoom-in">
-                <p class="brand-name">Raise Pet</p>
-                <p class="des">반려동물과 함께 기록하고 성장하는 반려생활 리워드 앱</p>
-            </div>
-        </div>
+        <video autoplay muted loop playsinline>
+            <source src="assets/videos/hero.webm" type="video/webm">
+        </video>
+
+        <p class="des" id="quote">매일의 기록이 반려와의 성장으로 이어지는 반려생활 리워드 경험<br>
+            라이즈펫에서 시작하세요.
+        </p>
     </main>
 
-    <article id="p2" class="page about-us">
-        <div class="inner">
-            <div class="wrapper-txt">
-                <div data-aos="fade-zoom-in">
-                    <h2>일상 기록을 포인트로</h2>
-                    <p>
-                        매일의 기록으로 반려동물과 함께<br>
-                        성장하는 라이즈펫을 만나보세요
-                    </p>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article id="p3" class="page reward">
+    <article id="p2" class="page reward">
         <div class="inner">
             <div class="wrapper-txt" data-aos="fade-right">
                 <h2>리워드<span class="float"><img src="assets/images/icon_reward.png" alt="coin_icon"></span></h2>
@@ -127,7 +113,7 @@
         </div>
     </article>
 
-    <article id="p4" class="page learn-earn">
+    <article id="p3" class="page learn-earn">
         <div class="inner">
             <div class="wrapper-txt" data-aos="fade-right">
                 <h2>배움과 보상</h2>
@@ -145,7 +131,7 @@
         </div>
     </article>
 
-    <article id="p5" class="page walking">
+    <article id="p4" class="page walking">
         <div class="inner">
             <div class="wrapper-txt" data-aos="fade-right">
                 <h2>산책<span class="float"><img src="assets/images/icon_walking.png" alt="clover_icon"></span></h2>
@@ -161,7 +147,7 @@
         </div>
     </article>
 
-    <article id="p6" class="page raise-loop">
+    <article id="p5" class="page raise-loop">
         <div class="inner">
             <div class="wrapper-txt">
                 <div data-aos="fade-zoom-in">
@@ -220,7 +206,7 @@
 
     </article>
 
-    <article id="p7" class="page ai-pet-life">
+    <article id="p6" class="page ai-pet-life">
         <div class="inner">
             <div class="wrapper-txt" data-aos="fade-right">
                 <h2>AI펫 라이프<span class="float"><img src="assets/images/icon_ai-pet-life.png"
@@ -238,7 +224,7 @@
         </div>
     </article>
 
-    <article id="p8" class="page pet-shop">
+    <article id="p7" class="page pet-shop">
         <div class="inner">
             <div class="wrapper-txt" data-aos="fade-right">
                 <p class="label">Coming Soon!</p>
@@ -256,7 +242,7 @@
         </div>
     </article>
 
-    <footer id="p9" class="page">
+    <footer id="p8" class="page">
         <div class="inner">
             <div class="top-area">
                 <i><img src="assets/svg/icon_footer.svg" alt=""></i>

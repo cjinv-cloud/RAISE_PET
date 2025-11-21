@@ -204,6 +204,7 @@
   1-2. 전역 CSS 변수 정의
   - 색상
   ******************************************/
+  --deep-black: #212121;
   --black: #353535;
   --white: #fff;
   --ivory: #FEF9E6;
@@ -342,7 +343,6 @@
     /* inline-svg 여백 제거 */
     fill: none;
     /* 아이콘 내부 채움 없음 */
-    stroke: currentColor;
     /* 부모 color 상속 */
     /* stroke-width: 2; */
     /* 선 굵기는 아이콘마다 각각 조절해야 해서 주석처리 */

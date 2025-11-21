@@ -16,6 +16,25 @@ header {
     padding: 20px 0;
 }
 
+/***** 헤더 색상 변경 위한 설정 시작 **********************/
+header svg, header nav.lang-nav ul li a {
+    transition: all 0.3s ease;
+}
+
+header .ivory {
+    /* 헤더 내부 색상 공통 */
+    /* 사용자가 보는 화면이 #p1 (main)일 때 : var(--ivory) */
+    color: var(--ivory);
+}
+
+header .black {
+    /* 헤더 내부 색상 공통 */
+    /* 사용자가 보는 화면이 #1이 아닐 때 : var(--black); */
+    color: var(--black);
+}
+/***** 헤더 색상 변경 위한 설정 끝 **********************/
+
+
 header.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -31,14 +50,16 @@ header .inner-header {
     margin: 0 auto;
 }
 
+
+
+
 header .logo {}
 
 header .logo a {}
 
 header .logo i {
-    width: 38px;
-    height: 38px;
-    aspect-ratio: 1/1;
+    width: 225px;
+    height: 60px;
 }
 
 header .logo svg {
@@ -215,34 +236,31 @@ footer {
 
 /*main*************************/
 main.hero {
-    background:
-        url(../assets/svg/hero.svg) no-repeat center center / 100% auto;
     position: relative;
+    overflow: hidden;
 }
 
-main .wrapper-txt {
+main video {
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+main p.des {
     width: 100%;
     text-align: center;
+    font-family: var(--main-font-03);
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 60px;
+    color: var(--ivory);
     position: absolute;
     left: 50%;
-    bottom: 100px;
-    transform: translateX(-50%);
-    /* AOS 애니메이션과 충돌 방지를 위해 자식 요소에 AOS 적용 권장 */
-}
-
-main .wrapper-txt .brand-name {
-    font-family: var(--main-font-02);
-    font-weight: 800;
-    font-size: 124px;
-    line-height: 110px;
-    margin-bottom: 28px;
-    letter-spacing: -2px;
-}
-
-main .wrapper-txt .des {
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 40px;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 
@@ -546,7 +564,7 @@ article.pet-shop .inner .wrapper-img img {
 
 /*footer****************************************************/
 footer {
-    background-color: #212121;
+    background-color: var(--deep-black);
     color: var(--white, #fff);
     position: relative;
     display: flex;
