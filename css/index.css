@@ -51,8 +51,6 @@ header .inner-header {
 }
 
 
-
-
 header .logo {}
 
 header .logo a {}
@@ -314,11 +312,25 @@ article .wrapper-txt .des {}
 
 article .wrapper-txt .des p {}
 
-article .wrapper-img {}
 
-article .wrapper-img img {
+/*article .wrapper-img-ui 공통**************************************/
+article .wrapper-img-ui {
+    display: flex;
+    column-gap: 16px;
+}
+article .wrapper-img-ui li {
+    width: 280px;
+    border-radius: 36px;
+    overflow: hidden;
+    border: 0.6px solid #DFD4A8;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+article .wrapper-img-ui li img {
     width: 100%;
 }
+
 
 /*article.reward****************************************************/
 article.reward {}
@@ -341,11 +353,8 @@ article.reward .wrapper-txt .des {}
 
 article.reward .wrapper-txt .des p {}
 
-article.reward .wrapper-img {}
+article.reward .wrapper-img-ui {}
 
-article.reward .wrapper-img img {
-    filter: drop-shadow(15.53px 15.53px 28px rgba(33, 33, 33, 0.15));
-}
 
 /*article.learn-earn****************************************************/
 article.learn-earn {
@@ -370,10 +379,7 @@ article.learn-earn .wrapper-txt .des {}
 
 article.learn-earn .wrapper-txt .des p {}
 
-article.learn-earn .wrapper-img {
-    display: flex;
-    column-gap: 16px;
-}
+article.learn-earn .wrapper-img-ui {}
 
 /*article.walking****************************************************/
 article.walking {}
@@ -396,9 +402,9 @@ article.walking .wrapper-txt .des {}
 
 article.walking .wrapper-txt .des p {}
 
-article.walking .wrapper-img {}
+article.walking .wrapper-img-ui {}
 
-article.walking .wrapper-img img {
+article.walking .wrapper-img-ui img {
     filter: drop-shadow(15.53px 15.53px 28px rgba(33, 33, 33, 0.15));
 }
 
