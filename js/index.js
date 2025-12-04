@@ -173,14 +173,6 @@ gsap.to(".float", {
     }
 });
 
-// GSAP rotate(회전효과) 설정 //////////////////////////////////////////////////////
-gsap.to(".rotate", {
-    rotation: 360,
-    duration: 6,          // 1바퀴 도는 시간 (짧을수록 빨라짐)
-    ease: "linear",       // 일정 속도 (멈춤X, 가감속X)
-    repeat: -1            // 무한 반복
-});
-
 
 // 임시로 header nav의 ul li a 태그 이동 기능 막기 함수
 // 개발/테스트 목적: true로 설정하면 언어 선택 링크 클릭해도 이동하지 않음
@@ -217,7 +209,7 @@ function disableLangLinksNavigation() {
     }
 }
 
-// hero 영역 텍스트(quote) GSAP 애니메이션 함수
+// main(hero) 영역 텍스트(quote) GSAP 애니메이션 함수
 function initQuoteAnimation() {
     const quoteElement = document.getElementById('quote');
 
