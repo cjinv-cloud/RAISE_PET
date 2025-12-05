@@ -7,8 +7,10 @@ body {
     background-color: #F8F3ED;
 
     /* 스크롤 동작은 유지하면서 브라우저 기본 스크롤바를 숨김 */
-    -ms-overflow-style: none; /* IE/Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 /* WebKit 기반 브라우저 스크롤바 숨김 */
@@ -28,7 +30,8 @@ header {
 }
 
 /***** 헤더 색상 변경 위한 설정 시작 **********************/
-header svg, header nav.lang-nav ul li a {
+header svg,
+header nav.lang-nav ul li a {
     transition: all 0.3s ease;
 }
 
@@ -43,6 +46,7 @@ header .black {
     /* 사용자가 보는 화면이 #1이 아닐 때 : var(--black); */
     color: var(--black);
 }
+
 /***** 헤더 색상 변경 위한 설정 끝 **********************/
 
 
@@ -161,7 +165,7 @@ nav.side-pager ul li a {
     align-items: center;
     font-size: 16px;
     font-weight: 700;
-    color: var(--black, #353535);
+    color: var(--side-pager-color);
     border-radius: 20px;
     text-decoration: none;
     text-transform: uppercase;
@@ -191,7 +195,7 @@ nav.side-pager ul li:not(.on) a span {
 nav.side-pager ul li.on a span {
     display: inline-block;
     margin-left: 12px;
-    color: var(--side-pager-color, #353535);
+    color: var(--side-pager-color);
 }
 
 /* 원 모양 indicator */
@@ -209,13 +213,13 @@ nav.side-pager ul li a::before {
 /* 일반 상태 - 테두리만 있는 원 */
 nav.side-pager ul li:not(.on) a::before {
     background: transparent;
-    border: 2px solid var(--side-pager-color, #353535);
+    border: 2px solid var(--side-pager-color);
 }
 
 /* 활성 상태 - 채워진 원 */
 nav.side-pager ul li.on a::before {
-    background: var(--side-pager-color, #353535);
-    border: 2px solid var(--side-pager-color, #353535);
+    background: var(--side-pager-color);
+    border: 2px solid var(--side-pager-color);
 }
 
 /* 호버 효과 - 원 모양(a 링크)에 hover했을 때 */
@@ -226,7 +230,7 @@ nav.side-pager ul li:not(.on) a:focus {
 
 nav.side-pager ul li:not(.on) a:hover::before,
 nav.side-pager ul li:not(.on) a:focus::before {
-    background: var(--side-pager-color, #353535);
+    background: var(--side-pager-color);
 }
 
 nav.side-pager ul li:not(.on) a:hover span,
@@ -234,7 +238,7 @@ nav.side-pager ul li:not(.on) a:focus span {
     margin-left: 12px;
     max-width: 200px;
     opacity: 1;
-    color: var(--side-pager-color, #353535);
+    color: var(--side-pager-color);
 }
 
 /*slideChange 구현 위한 설정*************************/
@@ -258,7 +262,7 @@ main video {
     z-index: 0;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 100%;
 }
 
@@ -273,7 +277,7 @@ main p.des {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 #quote .quote-char {
@@ -329,6 +333,7 @@ article .wrapper-img-ui {
     display: flex;
     align-items: end;
 }
+
 article .wrapper-img-ui li {
     width: 280px;
     border-radius: 36px;
@@ -371,15 +376,17 @@ article.reward .wrapper-txt .des {}
 article.reward .wrapper-txt .des p {}
 
 article.reward .wrapper-img-ui {
-    align-items: end;
+    align-items: center;
 }
+
 article.reward .wrapper-img-ui li:first-child {
-    transform: rotate(-2deg);
+    transform: rotate(-1.8deg);
 
 }
+
 article.reward .wrapper-img-ui li:last-child {
-    transform: rotate(5deg);
-    width: 250px;
+    transform: rotate(2.4deg);
+    width: 248px;
     position: relative;
     right: 16px;
 }
@@ -393,20 +400,23 @@ article.learn-earn {
 article.learn-earn .inner {}
 
 article.learn-earn .wrapper-img-ui {}
+
 article.learn-earn .wrapper-img-ui li:first-child {
-    transform: rotate(-5deg);
-    width: 240px;
+    transform: rotate(-6deg);
+    width: 246px;
     position: relative;
     left: 50px;
 }
+
 article.learn-earn .wrapper-img-ui li:nth-child(2) {
     position: relative;
     z-index: 1;
 }
+
 article.learn-earn .wrapper-img-ui li:last-child {
     position: relative;
-    transform: rotate(5deg);
-    width: 240px;
+    transform: rotate(6deg);
+    width: 246px;
     right: 50px;
 
 }
@@ -447,10 +457,11 @@ article.walking .wrapper-txt .des {}
 article.walking .wrapper-txt .des p {}
 
 article.walking .wrapper-img-ui {
-    column-gap: 16px;
+    column-gap: 28px;
 }
 
 article.walking .wrapper-img-ui li:first-child {}
+
 article.walking .wrapper-img-ui li:last-child {}
 
 /*article.raise-loop****************************************************/
@@ -476,6 +487,7 @@ article.raise-loop .wrapper-txt h2 span {
 }
 
 article.raise-loop .wrapper-txt h2 span img {}
+
 article.raise-loop .wrapper-txt h2 span img.rotate {
     position: absolute;
     top: 0;
@@ -511,12 +523,11 @@ article.raise-loop .wrapper-txt .contents ul li p.keyword i {
 article.raise-loop .wrapper-txt .contents ul li p.keyword i svg {
     width: 100%;
     height: 100%;
-    
+
 }
 
 
-article.raise-loop .wrapper-txt .contents ul li p.keyword-des {
-}
+article.raise-loop .wrapper-txt .contents ul li p.keyword-des {}
 
 article.raise-loop .wrapper-img {}
 
@@ -536,8 +547,7 @@ article.ai-pet-life .wrapper-txt h2 span {
     height: 132px;
 }
 
-article.ai-pet-life .wrapper-txt h2 span img {
-}
+article.ai-pet-life .wrapper-txt h2 span img {}
 
 article.ai-pet-life .wrapper-txt h3 {}
 
@@ -562,11 +572,17 @@ article.ai-pet-life .wrapper-img img {
 
 /*article.pet-shop****************************************************/
 
-article.pet-shop {}
+article.pet-shop {
+    background: #000;
+}
 
 article.pet-shop .inner {}
 
-article.pet-shop .inner .wrapper-txt {}
+article.pet-shop .inner .wrapper-txt {
+    color: var(--ivory);
+    width: 100%;
+    max-width: 790px;
+}
 
 article.pet-shop .inner .wrapper-txt p.label {
     font-family: var(--sub-font-01);
@@ -585,25 +601,26 @@ article.pet-shop .inner .wrapper-txt h2 span img {}
 article.pet-shop .inner .wrapper-txt h3 {}
 
 article.pet-shop .inner .wrapper-txt .des {
-    width: 100%;
-    max-width: 860px;
+
 }
 
 article.pet-shop .inner .wrapper-txt .des p {}
 
 article.pet-shop .inner .wrapper-img {
-    width: 580px;
+    width: 586px;
+    overflow: hidden;
 }
 
 article.pet-shop .inner .wrapper-img img {
     width: 100%;
+
 }
 
 
 /*footer****************************************************/
 footer {
     background-color: var(--deep-black);
-    color: var(--white, #fff);
+    color: var(--orange);
     position: relative;
     display: flex;
     align-items: center;
@@ -612,7 +629,7 @@ footer {
 footer .inner {}
 
 footer .inner .top-area {
-    color: var(--yellow);
+    color: var(--orange);
     margin-bottom: 84px;
     display: flex;
     column-gap: 12px;
@@ -623,6 +640,7 @@ footer .inner .top-area i {
     width: 152px;
     height: 162px;
 }
+
 footer .inner .top-area i img {
     width: 100%;
 }
@@ -634,11 +652,12 @@ footer .inner .top-area h2 {
 }
 
 footer .inner .info {}
+
 footer .inner .info::after {
     content: "";
     width: 100%;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--orange);
     margin: 56px 0;
 }
 
@@ -655,6 +674,7 @@ footer .inner .info .row p {
     margin-right: 35px;
     line-height: normal;
 }
+
 footer .inner .info .row p.name {
     font-weight: 700;
 }
@@ -672,7 +692,7 @@ footer .txt-cycle-wrapper {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--yellow);
+    background-color: var(--orange);
     height: 80px;
     display: flex;
     align-items: center;
@@ -688,7 +708,7 @@ footer .txt-cycle-wrapper ul {
 
 footer .txt-cycle-wrapper ul li {
     white-space: nowrap;
-    color: var(--black);
+    color: var(--deep-black);
     font-family: var(--main-font-01);
     font-weight: 400;
     font-size: 36px;
@@ -700,8 +720,8 @@ footer .txt-cycle-wrapper ul li {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
 }
-

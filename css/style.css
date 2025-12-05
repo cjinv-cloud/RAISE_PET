@@ -204,10 +204,10 @@
   1-2. 전역 CSS 변수 정의
   - 색상
   ******************************************/
-  --deep-black: #212121;
+  --deep-black: #000;
   --black: #353535;
   --white: #fff;
-  --ivory: #FEF9E6;
+  --ivory: #FFFCF3;
   --blue: #ABD2EF;
   --yellow: #FFD43A;
   --orange: #FE9D35;

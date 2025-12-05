@@ -41,14 +41,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. header 색상 변경 함수:
-    //    - 첫 번째 섹션(#p1)에서는 ivory 클래스 유지
+    //    - 첫 번째 섹션(#p1) 또는 #p7에서는 ivory 클래스 유지
     //    - 나머지 섹션에서는 black 클래스를 적용
     function applyHeaderColorState(id) {
-        const isFirstSection = id === 'p1';
+        const isIvorySection = id === 'p1' || id === 'p7';
         headerColorTargets.forEach((target) => {
-            target.classList.toggle('ivory', isFirstSection);
-            target.classList.toggle('black', !isFirstSection);
+            target.classList.toggle('ivory', isIvorySection);
+            target.classList.toggle('black', !isIvorySection);
         });
+    }
+
+    // 4. side-pager 색상 변경 함수:
+    //    - 기본값은 style.css에 정의된 --side-pager-color (#353535)
+    //    - #p7 구간에서는 헤더와 동일하게 ivory 색상 적용
+    const rootElement = document.documentElement;
+    const defaultPagerColor =
+        getComputedStyle(rootElement).getPropertyValue('--side-pager-color').trim() || '#353535';
+    const ivoryColor = getComputedStyle(rootElement).getPropertyValue('--ivory').trim() || '#FEF9E6';
+
+    function applySidePagerColor(id) {
+        if (!rootElement) return;
+        const isIvorySection = id === 'p7';
+        rootElement.style.setProperty('--side-pager-color', isIvorySection ? ivoryColor : defaultPagerColor);
     }
 
     function setActiveById(id) {
@@ -71,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         applySidePagerState(id);
         applyHeaderState(id);
         applyHeaderColorState(id);
+        applySidePagerColor(id);
     }
 
     function smoothScrollTo(targetY, duration, callback) {
