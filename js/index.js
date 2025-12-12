@@ -272,7 +272,7 @@ gsap.to(".float", {
 
 // 임시로 header nav의 ul li a 태그 이동 기능 막기 함수
 // 개발/테스트 목적: true로 설정하면 언어 선택 링크 클릭해도 이동하지 않음
-const DISABLE_LANG_LINKS_NAVIGATION = true; // false = 정상 작동, true = 이동 막기
+const DISABLE_LANG_LINKS_NAVIGATION = false; // false = 정상 작동, true = 이동 막기
 const preventLangNavigation = (event) => event.preventDefault();
 
 // 언어 선택 링크 네비게이션 비활성화 함수

@@ -163,10 +163,14 @@
 
   /* 폰트 크기 설정 */
   /* 폰트 크기 : desktop */
-  --pc-size-h2: 120px;
+  --pc-size-h2: 100px;
   --pc-line-height-h2: 110px;
-  --pc-size-h3: 64px;
-  --pc-line-height-h3: 72px;
+  --pc-size-h2-ko: 128px;
+  --pc-line-height-h2-ko: 110px;
+  --pc-size-h3: 58px;
+  --pc-line-height-h3: 68px;
+  --pc-size-h3-ko: 64px;
+  --pc-line-height-h3-ko: 72px;
   --pc-size-p: 24px;
   --pc-line-height-p: 32px;
 
@@ -188,9 +192,9 @@
   --mobile-size-p: px;
 
   /* 폰트패밀리 */
-  --main-font-01: 'HsJandari';
+  --main-font-01: 'Paperozi', sans-serif;
   --main-font-02: 'Paperozi', sans-serif;
-  --main-font-03: 'Suit', sans-serif;
+  --main-font-03: 'Paperozi', sans-serif;
   --sub-font-01: "DynaPuff", system-ui;
 
   /* 폰트 정렬 기준 */
@@ -251,7 +255,7 @@
     font-size: var(--pc-size-h2);
     line-height: var(--pc-line-height-h2);
     letter-spacing: -2px;
-    font-weight: 400;
+    font-weight: 700;
   }
 
   h3 {
@@ -302,7 +306,8 @@
   ******************************************/
 
   --pc-width: 100%;
-  --pc-con-width: 1440px;
+  --pc-con-width: 1500px;
+  --pc-con-width-ko: 1440px;
   /* --pc-padding: 0 40px; */
   --tab-width: 100%;
   --tab-con-width: 100%;
@@ -318,6 +323,7 @@
     width: var(--pc-width);
     max-width: var(--pc-con-width);
     margin: 0 auto;
+    column-gap: 30px;
   }
 
   .inner-header {

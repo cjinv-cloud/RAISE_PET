@@ -1,0 +1,63 @@
+/* index.css */
+@charset "utf-8";
+
+:root {
+
+    /* 폰트 관련 ko 설정 */
+
+    /* 폰트패밀리-ko */
+    --main-font-01: 'HsJandari';
+    --main-font-02: 'Paperozi', sans-serif;
+    --main-font-03: 'Suit', sans-serif;
+    --sub-font-01: "DynaPuff", system-ui;
+
+
+    /* 1-6. 폰트 설정 */
+    --font-weight-nomoral: 600;
+    --font-weight-bold: 700;
+
+    font-family: var(--main-font-03);
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    /* h : title */
+    h2 {
+        font-family: var(--main-font-01);
+        font-size: var(--pc-size-h2-ko);
+        line-height: var(--pc-line-height-h2-ko);
+        letter-spacing: -2px;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-family: var(--main-font-02);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--pc-size-h3-ko);
+        line-height: var(--pc-line-height-h3-ko);
+    }
+
+    h4 {}
+
+    h5 {}
+
+    h6 {}
+
+    /* p : des, text */
+    p {
+        font-family: var(--main-font-03);
+        font-size: var(--pc-size-p);
+        line-height: var(--pc-line-height-p);
+        font-weight: var(--font-weight-nomoral);
+    }
+
+    /* inner 관련 ko 설정 */
+    .inner {
+        max-width: var(--pc-con-width-ko);
+
+    }
+
+}
+
+article.pet-shop .inner .wrapper-txt {
+    max-width: 790px;
+}
